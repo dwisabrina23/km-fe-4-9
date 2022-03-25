@@ -1,0 +1,22 @@
+.gif-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    border: 1px rgb(132, 134, 252) solid;
+    border-radius: 10px;
+    box-shadow: 1px 2px rgb(128, 123, 156);
+    background-color: rgb(151, 152, 255);
+}
+
+.gif-wrapper p{
+    color: rgb(197, 89, 0);
+    font-weight: bold;
+    font-family: monospace;
+    margin: 10px 5px;
+}
+.gif-wrapper img{
+    margin: 20px auto 0;
+    width: 200px;
+    height: 200px;
+}
