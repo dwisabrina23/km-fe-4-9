@@ -7,7 +7,7 @@ function HomePage(props) {
     return (
         <div>
             <SearchBar/>
-            <div class="row d-flex mb-3 justify-content-center">
+            <div className="row d-flex mb-3 justify-content-center">
                 {
                     data.map((item) => (
                         <Gif title={item.title} url={item.url} key={item.id}/>
