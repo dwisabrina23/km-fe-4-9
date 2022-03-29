@@ -64,7 +64,7 @@ function SearchPage() {
                     <p>Search result for <b>'{search.data}'</b>:</p>
                 )}
             </div>
-            <div class="row d-flex mb-3 justify-content-center">
+            <div className="row d-flex mb-3 justify-content-center">
                 {gifData.map((item) => (
                     <Gif title={item.title} url={item.images.original.url} key={item.id} />
                 ))}
