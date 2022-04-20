@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 
 function Gif({ title, url }) {
     return (
-        <Card sx={{ maxWidth: 345 }} className="col-md-3 m-2" variant="outlined">
+        <Card sx={{ maxWidth: 345 }} className="col-md-3 m-2" variant="outlined" data-testid="gif">
             <CardMedia component="img" height="200" image={url} alt={title} />
             <CardContent sx={{display:"flex", flexDirection:"column", justifyContent:"space-between", padding:"1rem"}}>
                 <Typography gutterBottom variant="h5" component="div">

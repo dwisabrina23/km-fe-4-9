@@ -5,7 +5,7 @@ import axios from 'axios';
 function TrendingPage() {
     const [trending, setTrending] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
-
+    const [error, setError] = useState(null)
     const fetchData = async () => {
         const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
         let result;
@@ -17,7 +17,7 @@ function TrendingPage() {
             setTrending(result.data.data);
         } catch (err) {
             setIsLoaded(true);
-            console.error(err);
+            setError(err);
         }
     };
 
@@ -28,6 +28,7 @@ function TrendingPage() {
     return (
         <div className="m-3 text-center">
             <h3>Trending on Giphy</h3>
+            {error && <span>Ada yang error ...</span>}
             {isLoaded ? (
                 <div className="row d-flex mb-3 justify-content-center">
                     {trending.map((item) => (
