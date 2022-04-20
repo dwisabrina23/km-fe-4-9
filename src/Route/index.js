@@ -3,6 +3,7 @@ import {Switch, Route} from "react-router-dom";
 import Navbar from '../Components/Navbar/Navbar';
 import HomePage from '../Pages/Home';
 import TrendingPage from '../Pages/Trending/TrendingPage';
+import NotFound from '../Components/NotFoundPage/NotFound';
 
 function Router(props) {
     return (
@@ -16,9 +17,7 @@ function Router(props) {
                 <TrendingPage/>
             </Route>
             <Route path="*">
-                <div className='d-flex justify-content-center align-item-center'>
-                    <p>Page Not Found</p>
-                </div>
+                <NotFound/>
             </Route>
         </Switch>
     );
