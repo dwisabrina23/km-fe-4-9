@@ -1,14 +1,21 @@
 import './App.css';
-import HomePage from "./Pages/Home/";
-import SearchPage from "./Pages/Search/SearchPage";
-import SearchPageClass from './Pages/Search/SearchPageClass';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './Redux/store';
+import {BrowserRouter} from 'react-router-dom';
+import Router from './Route';
+
 function App() {
   return (
-    <div className="App">
-      {/* <HomePage/> */}
-      {/* <SearchPage/> */}
-      <SearchPageClass/>
-    </div>
+    <> 
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <Router/>
+        </BrowserRouter>
+        </PersistGate>
+      </Provider>
+    </>
   );
 }
 
